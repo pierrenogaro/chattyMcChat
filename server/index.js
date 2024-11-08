@@ -2,8 +2,9 @@ const http = require('http');
 const socketIo = require ('socket.io')
 
 const server = http.createServer((req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('serveur socket.io en marche');
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('serveur socket.io en fonctionnement');
+
 })
 
 const io = socketIo(server, {
@@ -18,7 +19,7 @@ const io = socketIo(server, {
 
 io.on ('connection', (socket) => {
     console.log('New user connected');
-    console.log('user-socket ID :' + socket.user.id);
+    console.log('user-Socker ID :'+ socket.id);
 
     socket.on('message', (message) => {
         console.log('Received message : '+ socket.id)
