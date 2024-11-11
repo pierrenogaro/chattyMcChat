@@ -11,7 +11,7 @@ const io = socketIo(server, {
 
     transports: ['websocket', 'polling'],
     cors: {
-        origin: "messagerieclient.pierrenogaro.com",
+        origin: "*",
         methods: ['GET', 'POST'],
     }
 });

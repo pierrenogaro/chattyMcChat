@@ -1,4 +1,4 @@
-const socket = io('wss://messagerieserver.pierrenogaro.com');
+const socket = io('http://localhost:8080');
 const button = document.querySelector("button");
 
 socket.on('message', (message) => {
